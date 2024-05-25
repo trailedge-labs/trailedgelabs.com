@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
+import Nav from '../../components/Nav.astro';
 import PostCard from '../../components/PostCard.astro';
 
 import { getCollection } from 'astro:content';
@@ -11,7 +11,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout title='Trailedge Labs // Blog' desc='Trailedge Labs Blog'>
-  <Header />
+  <Nav />
 
   <section class='w-full justify-center py-4'>
     <a href='/blog' class='flex inline-flex items-center px-8 py-4 text-gray-800 dark:text-gray-200'>
