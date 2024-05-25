@@ -1,54 +1,12 @@
 ---
-import DarkModeLink from './DarkModeLink.astro';
-import LogoLink from './LogoLink.astro';
-import NavLink from './NavLink.astro';
-import ContactLink from './ContactLink.astro';
+import NavLinks from './NavLinks.astro';
 ---
 
 <section class='sticky top-10 z-50 flex flex-wrap items-center justify-between pb-20'>
   <nav class="flex items-center w-full select-none" x-data="{ showMenu: false }">
     <div class="relative flex flex-wrap items-start justify-between w-full mx-auto font-medium md:items-center md:h-20 md:justify-between">
       <div :class="{'flex': showMenu, 'hidden md:flex': !showMenu }" class="absolute flex-col items-center justify-center w-full h-auto px-2 text-center text-gray-400 -translate-x-1/2 border-0 border-acc dark:border-acc-dark rounded-full md:border md:w-auto left-1/2 md:flex-row md:items-center bg-[rgba(var(--pri),0.5)] dark:bg-[rgba(var(--pri-dark),0.5)]">
-        <LogoLink />
-
-        <NavLink url='/' text='Home'>
-          <svg width="2em" height="2em" viewBox="0 0 14 14">
-            <title>Home</title>
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 6.94a.999.999 0 0 0-.32-.74L7 .5L.82 6.2a1 1 0 0 0-.32.74v5.56a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1zM7 13.5v-4"/>
-          </svg>
-        </NavLink>
-
-        <NavLink url='/about' text='About'>
-          <svg width="2em" height="2em" viewBox="0 0 14 14">
-            <title>About</title>
-            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 4.054a1.5 1.5 0 1 1 1.5 1.5v.5m0 2.062a.25.25 0 0 1 0-.5m0 .5a.25.25 0 0 0 0-.5"/><path d="M12.5 13.5H3a1.5 1.5 0 1 1 0-3h8.5a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1H3a1.5 1.5 0 0 0-1.5 1.46v10m10-1.46v3"/></g>
-          </svg>
-        </NavLink>
-
-        <NavLink url='/blog' text='Blog'>
-          <svg width="2em" height="2em" viewBox="0 0 14 14">
-            <title>Blog</title>
-            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 9l-3 .54L5 6.5L10.73.79a1 1 0 0 1 1.42 0l1.06 1.06a1 1 0 0 1 0 1.42Z"/><path d="M12 9.5v3a1 1 0 0 1-1 1H1.5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3"/></g>
-          </svg>
-        </NavLink>
-
-        <NavLink url='/#work' text='Work'>
-          <svg width="2em" height="2em" viewBox="0 0 14 14">
-            <title>Work</title>
-            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="13" height="13" x=".5" y=".5" rx="1"/><path d="M.5 4h13m-9 3L3 8.5L4.5 10M10 7l1.5 1.5L10 10m-3.5.5L8 6"/></g>
-          </svg>
-        </NavLink>
-
-        <NavLink url='/resources' text='Resources'>
-          <svg width="2em" height="2em" viewBox="0 0 14 14">
-            <title>Resources</title>
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m11 13.5l-4-4l-4 4v-12a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
-          </svg>
-        </NavLink>
-
-        <ContactLink />
-
-        <DarkModeLink />
+      <NavLinks />
     </div>
     <div @click="showMenu = !showMenu" class="absolute right-0 z-50 flex flex-col items-end translate-y-1.5 w-10 h-10 p-2 mr-4 rounded-full cursor-pointer md:hidden hover:bg-gray-200/10 hover:bg-opacity-10" :class="{ 'text-gray-400': showMenu, 'text-gray-100': !showMenu }">
         <svg class="w-6 h-6" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak>
