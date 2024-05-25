@@ -1,6 +1,7 @@
 <button
   @click="modalOpen=true"
-  class="flex gap-1 cursor-pointer font-baunk text-gray-800 dark:text-gray-200 h-12 items-center justify-center space-y-2 font-semibold rounded-lg border-[1px] border-none bg-sec-half dark:bg-sec-half-dark p-4 text-sm rounded-md shadow-xl active:translate-y-[2px] transition-all duration-300 ease-out hover:shadow-acc-shadow dark:hover:shadow-acc-shadow-dark">
+  class='relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center md:py-2 group md:w-auto md:px-2 lg:mx-3 md:text-center duration-300 ease-out hover:text-white'
+>
   <div class='flex items-center space-x-2'>
     <svg width="2em" height="2em" viewBox="0 0 14 14">
       <title>Contact</title>
@@ -8,4 +9,5 @@
     </svg>
     <span>Contact</span>
   </div>
+  <span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-6 group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900"></span>
 </button>
