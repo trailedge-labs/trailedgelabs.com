@@ -7,6 +7,6 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://trailedgelabs.com',
+  site: 'https://www.trailedgelabs.com',
   integrations: [tailwind(), alpinejs(), sitemap(), mdx()]
 });
